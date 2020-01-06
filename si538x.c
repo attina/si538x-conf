@@ -1,11 +1,6 @@
 /*
-    i2cget.c - A user-space program to read an I2C register.
-    Copyright (C) 2005-2012  Jean Delvare <jdelvare@suse.de>
-
-    Based on i2cset.c:
-    Copyright (C) 2001-2003  Frodo Looijaard <frodol@dds.nl>, and
-                             Mark D. Studebaker <mdsxyz123@yahoo.com>
-    Copyright (C) 2004-2005  Jean Delvare
+    si538x.c - A user-space program to configure si538x chip by i2c.
+    Copyright (C) 2019-2020  Gavin Gao <attinagaoxu@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
