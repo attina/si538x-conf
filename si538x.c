@@ -199,7 +199,7 @@ int main(int argc, char *argv[])
 			buf[11] = 0x01;
 
 			if (write(file, buf, 12) != 12) {
-				fprintf(stderr, "Error: Write register 0x04%x failed: %s\n", si5383_revd_registers[i].address, strerror(errno));
+				fprintf(stderr, "Error: Write register 0x%04x failed: %s\n", si5383_revd_registers[i].address, strerror(errno));
 				break;
 
 			if (i == 3)
