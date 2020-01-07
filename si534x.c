@@ -28,7 +28,11 @@
 #include <linux/i2c-dev.h>
 #include "smbus.h"
 #include "i2cbusses.h"
+#if 0
 #include "si5340-registers-new.h"
+#else
+#include "si5340-registers-default.h"
+#endif
 
 #define VERSION "1.0.0"
 
