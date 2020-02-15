@@ -8,9 +8,9 @@
  *
  * Part:		                                       Si5386A Rev E
  * Design ID:                                          V1
- * Includes Pre/Post Download Control Register Writes: No
+ * Includes Pre/Post Download Control Register Writes: Yes
  * Created By:                                         ClockBuilder Pro v2.39 [2019-12-11]
- * Timestamp:                                          2020-02-14 20:12:55 GMT+08:00
+ * Timestamp:                                          2020-02-15 18:15:34 GMT+08:00
  *
  * A complete design report corresponding to this export is included at the end 
  * of this header file.
@@ -20,7 +20,7 @@
 #ifndef SI5386A_REVE_REG_CONFIG_HEADER
 #define SI5386A_REVE_REG_CONFIG_HEADER
 
-#define SI5386A_REVE_REG_CONFIG_NUM_REGS				557
+#define SI5386A_REVE_REG_CONFIG_NUM_REGS				565
 
 typedef struct
 {
@@ -31,6 +31,19 @@ typedef struct
 
 si5386a_reve_register_t const si5386a_reve_registers[SI5386A_REVE_REG_CONFIG_NUM_REGS] =
 {
+
+	/* Start configuration preamble */
+	{ 0x0B24, 0xC0 },
+	{ 0x0B25, 0x00 },
+	{ 0x0540, 0x01 },
+	/* End configuration preamble */
+
+	/* Delay 625 msec */
+	/*    Delay is worst case time for device to complete any calibration */
+	/*    that is running due to device state change previous to this script */
+	/*    being processed. */
+
+	/* Start configuration registers */
 	{ 0x0006, 0x00 },
 	{ 0x0007, 0x00 },
 	{ 0x0008, 0x00 },
@@ -588,6 +601,15 @@ si5386a_reve_register_t const si5386a_reve_registers[SI5386A_REVE_REG_CONFIG_NUM
 	{ 0x0C03, 0x02 },
 	{ 0x0C07, 0x01 },
 	{ 0x0C08, 0x01 },
+	/* End configuration registers */
+
+	/* Start configuration postamble */
+	{ 0x0514, 0x01 },
+	{ 0x001C, 0x01 },
+	{ 0x0540, 0x00 },
+	{ 0x0B24, 0xC3 },
+	{ 0x0B25, 0x02 },
+	/* End configuration postamble */
 
 };
 
@@ -600,7 +622,7 @@ si5386a_reve_register_t const si5386a_reve_registers[SI5386A_REVE_REG_CONFIG_NUM
  * Project File:       C:\projects\5G\datasheet\clock\HUB≈‰÷√\Si5386A-RevE-V1-Project.slabtimeproj
  * Design ID:          V1
  * Created By:         ClockBuilder Pro v2.39 [2019-12-11]
- * Timestamp:          2020-02-14 20:12:55 GMT+08:00
+ * Timestamp:          2020-02-15 18:15:34 GMT+08:00
  * 
  * Design Rule Check
  * =================
