@@ -157,7 +157,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	printf("Checking SI5340 device ready register...");
+	printf("Checking SI5386 device ready register...\n");
 
 	switch (size) {
 	case I2C_SMBUS_BYTE:
@@ -187,7 +187,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("OK\n");
-		printf("Writing SI5340 registers ...\n");
+		printf("Writing SI5386 registers ...\n");
 		for (int i = 0; i < SI5386A_REVE_REG_CONFIG_NUM_REGS; i++)
 		{
 			if (pageid != ((si5386a_reve_registers[i].address >> 8) & 0xff))

@@ -152,7 +152,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	printf("Checking SI5383 device ready register...");
+	printf("Checking SI5383 device ready register...\n");
 
 	switch (size) {
 	case I2C_SMBUS_BYTE:
