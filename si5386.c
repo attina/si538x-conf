@@ -208,8 +208,8 @@ int main(int argc, char *argv[])
 				fprintf(stderr, "Error: Write register 0x%04x failed: %s\n", si5386a_reve_registers[i].address, strerror(errno));
 				break;
 
-			if (i == 5)
-				usleep(300);
+			if (i == 2)
+				usleep(625);
 			}
 		}
 		printf("Writing Done!\n");
